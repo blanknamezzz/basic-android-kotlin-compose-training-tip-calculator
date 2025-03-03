@@ -13,9 +13,3 @@ The BMI Calculator is a simple and user-friendly application designed to calcula
 - **Real-time Feedback**: The application updates the BMI and health suggestions in real-time as users input their weight or height.
 - **User-Friendly Interface**: Designed with a clean and simple interface, making it easy for users of all ages to navigate.
 - **With a clear button**: User can use this clear button to clear all the button and input 
-
-## Installation
-
-1. Clone the repository to your local machine:
-   ```bash
-   git clone https://github.com/your-username/BMI-calculator.git
