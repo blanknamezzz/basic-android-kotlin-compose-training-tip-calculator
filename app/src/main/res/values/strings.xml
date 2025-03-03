@@ -26,4 +26,10 @@
     <string name="calculate">Do Calculation</string>
     <string name="clear">Clear</string>
     <string name="error_message">Please enter the correct Height and Weight</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal_weight">Normal weight</string>
+    <string name="overweight">Overweight</string>
+    <string name="moderate_obesity">Moderate obesity</string>
+    <string name="severe_obesity">Severe obesity</string>
+    <string name="very_severe_obesity">Very severe or morbid obesity</string>
 </resources>

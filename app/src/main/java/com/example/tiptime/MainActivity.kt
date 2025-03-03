@@ -76,16 +76,16 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-fun getBmiCategory(bmi: Double): String {
-    return when {
-        bmi < 18.5 -> "Underweight"
-        bmi in 18.5..24.9 -> "Normal weight"
-        bmi in 25.0..29.9 -> "Overweight"
-        bmi in 30.0..34.9 -> "Moderate obesity"
-        bmi in 35.0..39.9 -> "Severe obesity"
-        else -> "Very severe or morbid obesity"
-    }
-}
+//fun getBmiCategory(bmi: Double): String {
+//    return when {
+//        bmi < 18.5 -> getString(R.string.underweight)
+//        bmi in 18.5..24.9 -> getString(R.string.normal_weight)
+//        bmi in 25.0..29.9 -> getString(R.string.overweight)
+//        bmi in 30.0..34.9 -> getString(R.string.moderate_obesity)
+//        bmi in 35.0..39.9 -> getString(R.string.severe_obesity)
+//        else -> getString(R.string.very_severe_obesity)
+//    }
+//}
 @Composable
 fun EditNumberField(
     @StringRes label: Int,
@@ -199,7 +199,7 @@ fun TipTimeLayout() {
             onClick = {
                 bmi = calculateBmi(height, weight)
                 isCalculated = true
-                Log.d("BMI_CALCULATION", "BMI: $bmi")
+                //Log.d("BMI_CALCULATION", "BMI: $bmi")
                 if(bmi == 0.0){
                     isError = true
                 }
@@ -219,6 +219,8 @@ fun TipTimeLayout() {
                 weightInput = ""
                 isCalculated = false
                 isError = true
+                useft = false
+                uselb = false
             },
             modifier = Modifier
                 .padding(bottom = 32.dp)
@@ -243,9 +245,16 @@ fun TipTimeLayout() {
 
         }
         if(!isError){
-            val answer = getBmiCategory(bmi)
+            val bmiCategory = when {
+                bmi < 18.5 -> (R.string.underweight)
+                bmi in 18.5..24.9 -> (R.string.normal_weight)
+                bmi in 25.0..29.9 -> (R.string.overweight)
+                bmi in 30.0..34.9 -> (R.string.moderate_obesity)
+                bmi in 35.0..39.9 -> (R.string.severe_obesity)
+                else -> (R.string.very_severe_obesity)
+            }
             Text(
-                text = answer,
+                text = stringResource(bmiCategory),
                 style = MaterialTheme.typography.displaySmall
             )
         }
