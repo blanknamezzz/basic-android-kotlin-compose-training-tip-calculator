@@ -58,6 +58,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Switch
+import androidx.compose.runtime.mutableDoubleStateOf
 import androidx.compose.ui.unit.sp
 
 class MainActivity : ComponentActivity() {
@@ -135,7 +136,7 @@ fun TipTimeLayout() {
     var weight = weightInput.toDoubleOrNull() ?: 0.0
     var height = heightInput.toDoubleOrNull() ?: 0.0
     //var roundUp by remember { mutableStateOf(false) }
-    var bmi by remember { mutableStateOf(0.0) }
+    var bmi by remember { mutableDoubleStateOf(0.0) }
     var isCalculated by remember { mutableStateOf(false) }
     var isError by remember { mutableStateOf(true) }
     var useft by remember { mutableStateOf(false) }
@@ -196,8 +197,8 @@ fun TipTimeLayout() {
         )
         Button(
             onClick = {
-                bmi = calculateBmi(height, weight) // 点击按钮时计算 BMI
-                isCalculated = true // 标记已计算
+                bmi = calculateBmi(height, weight)
+                isCalculated = true
                 Log.d("BMI_CALCULATION", "BMI: $bmi")
                 if(bmi == 0.0){
                     isError = true
@@ -214,9 +215,9 @@ fun TipTimeLayout() {
         }
         Button(
             onClick = {
-                heightInput = "" // 清除身高输入
-                weightInput = "" // 清除体重输入
-                isCalculated = false // 重置计算结果
+                heightInput = ""
+                weightInput = ""
+                isCalculated = false
                 isError = true
             },
             modifier = Modifier
@@ -229,7 +230,7 @@ fun TipTimeLayout() {
             if(isError){
                 Text(
                     text = stringResource(R.string.error_message),
-                    fontSize = 24.sp, // 设置字体大小为 24sp
+                    fontSize = 24.sp,
                     style = MaterialTheme.typography.displaySmall
                 )
             }
