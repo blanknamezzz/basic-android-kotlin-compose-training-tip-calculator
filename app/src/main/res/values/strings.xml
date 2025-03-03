@@ -15,8 +15,15 @@
   ~ limitations under the License.
   -->
 <resources>
-    <string name="app_name">Tip Time</string>
-    <string name="calculate_tip">Calculate Tip</string>
-    <string name="bill_amount">Bill Amount</string>
-    <string name="tip_amount">Tip Amount: %s</string>
+    <string name="app_name">BMI Calculator</string>
+    <string name="calculate_bmi">Calculate BMI</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="your_bmi_is">Your BMI is: %1$.2f</string>
+    <string name="ft">type in height in ft</string>
+    <string name="lb">type in weight in lb</string>
+    <string name="round_up_tip">Round up tip?</string>
+    <string name="calculate">Do Calculation</string>
+    <string name="clear">Clear</string>
+    <string name="error_message">Please enter the correct Height and Weight</string>
 </resources>
