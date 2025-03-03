@@ -104,7 +104,7 @@ fun EditNumberField(
     )
 }
 @Composable
-fun RoundTheTipRow(
+fun anothertypeinput(
     type:Int,
     roundUp: Boolean,
     onRoundUpChanged: (Boolean) -> Unit,
@@ -183,13 +183,13 @@ fun TipTimeLayout() {
             ),
             modifier = Modifier.padding(bottom = 32.dp).fillMaxWidth()
         )
-        RoundTheTipRow(
+        anothertypeinput(
             type = 0,
             roundUp = useft,
             onRoundUpChanged = { useft = it },
             modifier = Modifier.padding(bottom = 16.dp)
         )
-        RoundTheTipRow(
+        anothertypeinput(
             type = 1,
             roundUp = uselb,
             onRoundUpChanged = { uselb = it },
