@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "422499011909",
+    "project_id": "bmi-ea950",
+    "storage_bucket": "bmi-ea950.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422499011909:android:a6e50730f228d731bc822c",
+        "android_client_info": {
+          "package_name": "com.example.tiptime"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5pPGP_GpMicXpoqkK_U4CIrVFLrwv_9g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
